@@ -1,34 +1,53 @@
-# claw-companion
+# Claw 伴侣
 
-Claw 伴侣（Web 管理面板）。
+**Claw 伴侣** 是一个面向自托管 Claw 服务的 Web 管理面板：把原本需要敲命令行的部署、配置、联调，变成“打开网页就能做”的一套控制台。
 
-## 安装（推荐：Release 包，无需源码/无需 git）
+如果你正在搭一个“AI 伴侣/AI 助手”服务，Claw 伴侣能让你更快把服务跑起来、稳定运行，并且更轻松地把它接入到你常用的消息渠道。
 
-**Canonical 安装目录：`/opt/claw-companion`**
+## 你可以用它做什么？
+
+### A) 一键部署 / 一键更新（面板化运维）
+- 在服务器上快速安装并启动管理面板
+- 在面板里检查更新并更新（无需你手动拉代码、跑脚本）
+- 出问题也能快速回滚/重启（运维动作可视化、少踩坑）
+
+### B) 多渠道消息接入（把 AI 送到你常用的聊天软件里）
+- 通过面板配置/管理不同的消息渠道接入（例如 Telegram 等）
+- 让你的 AI 伴侣能在你习惯的聊天入口里工作，而不是只在终端里跑
+
+### C) 网关/连接管理（把“连不上/配对失败”变成可诊断问题）
+- 看到连接状态与关键配置项
+- 遇到常见连接问题时，能更快定位原因并修复
+
+## 适合谁用？
+
+- 想把 AI 伴侣部署到自己的服务器、并且希望 **少折腾命令行** 的人
+- 需要把服务接入聊天渠道、希望 **配置更直观** 的开发者/团队
+- 想要一个“可交付给别人用”的控制台：用户照着步骤就能装、能更新
+
+## 快速开始（安装）
+
+在你的 VPS 上执行：
 
 ```bash
 ssh root@YOUR_VPS 'bash -s' < deploy.sh
 ```
 
-自定义端口：
+自定义端口（默认 3210）：
 
 ```bash
 COMPANION_PORT=3210 ssh root@YOUR_VPS 'bash -s' < deploy.sh
 ```
 
-> 旧版可能安装在 `/root/.openclaw/companion`。更新时会自动识别并尽量迁移到 `/opt/claw-companion`（或保持原目录）。
+安装完成后，在浏览器打开：
+
+- `http://YOUR_VPS_IP:3210`
 
 ## 更新
 
-面板内：系统 → **检查更新 / 更新 Claw伴侣**（优先从本仓库的 GitHub Release 更新）。
+在面板里：系统 → **检查更新 / 更新 Claw 伴侣**
 
-如果你需要命令行更新（可选）：
+## 下载
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/aicompaniondev/claw-companion/main/scripts/release-update.sh | bash
-```
-
-## 版本与下载
-
-请到 Releases 页面下载对应版本：
+到 Releases 下载最新版：
 <https://github.com/aicompaniondev/claw-companion-releases/releases>

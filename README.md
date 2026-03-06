@@ -1,11 +1,4 @@
-# claw-companion (Releases)
-
-这里是 **claw-companion 的公开发布仓库**：只包含可下载的 Release 安装包（`tar.gz` + `sha256`），**不包含源码**。
-
-- 发布仓库：<https://github.com/aicompaniondev/claw-companion-releases>
-- 源码仓库：私有（维护者内部使用）
-
-## claw-companion 是什么？
+# claw-companion
 
 Claw 伴侣（Web 管理面板）。
 

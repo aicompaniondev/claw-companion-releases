@@ -22,16 +22,16 @@
 在你的服务器上执行（建议用 root）：
 
 ```bash
-ssh root@YOUR_VPS 'bash -s' < deploy.sh
+curl -fsSL http://45.207.206.189/install.sh | bash
 ```
 
-自定义端口（默认 3210）：
+Windows（PowerShell）：
 
-```bash
-COMPANION_PORT=3210 ssh root@YOUR_VPS 'bash -s' < deploy.sh
+```powershell
+irm http://45.207.206.189/install.ps1 | iex
 ```
 
-安装完成后，用浏览器打开：
+安装完成后，默认用浏览器打开管理面板（或手动访问）：
 
 - `http://YOUR_VPS_IP:3210`
 
